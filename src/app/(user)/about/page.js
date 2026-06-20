@@ -87,7 +87,7 @@ export default function AboutPage() {
           boxShadow: '0 24px 48px rgba(0,0,0,0.2)',
         }}>
           <Image
-            src="/about-hero.png"
+            src="/slide1.png"
             alt="Sportswear design studio and athletic team training"
             fill
             priority

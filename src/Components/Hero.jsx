@@ -42,16 +42,7 @@ const SLIDES = [
     cta: { label: 'Our Standards', href: '/about' },
     img: '/slide3.png',
   },
-  {
-    id: 's4',
-    num: '04',
-    tag: 'Global Reach',
-    h1: 'Outfitting',
-    h2: 'The World.',
-    sub: '150+ brand partners. 60+ countries served. Championship-level gear delivered on time, every time.',
-    cta: { label: 'About Us', href: '/about' },
-    img: '/slide4.png',
-  },
+  
 ];
 
 const DELAY = 6000;
