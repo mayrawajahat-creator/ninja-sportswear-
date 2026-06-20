@@ -21,7 +21,9 @@ export default function Home() {
       <ProcessSection />
       <WhyChooseUs />
       <PerformanceLookbook />
-      <CTABanner />
+      <div className="hidden lg:block">
+        <CTABanner /> </div>
+      
     </>
   );
 }
