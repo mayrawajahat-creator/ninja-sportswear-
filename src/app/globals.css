@@ -1,0 +1,121 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: all;
+}
+
+/* ===== NINJA SPORTS WEAR — GLOBAL STYLES ===== */
+
+:root {
+  --orange: #FF6B00;
+  --orange-light: #FF8C00;
+  --orange-faint: rgba(255, 107, 0, 0.08);
+  --black: #0A0A0A;
+  --white: #ffffff;
+  --gray-50: #FAFAFA;
+  --gray-100: #F5F5F5;
+  --text-primary: #111111;
+  --text-muted: #888888;
+  --border: rgba(0, 0, 0, 0.06);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #fff;
+  color: var(--text-primary);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 107, 0, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 0, 0.25) transparent;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(255, 107, 0, 0.2);
+  color: #111;
+}
+
+/* ===== FOCUS VISIBLE ===== */
+:focus-visible {
+  outline: 2px solid #FF6B00;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+button, a, input, select, textarea {
+  transition: all 0.2s ease;
+}
+
+/* ===== PERFORMANCE LOOKBOOK ===== */
+@media (max-width: 860px) {
+  .lookbook-container {
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 1.5rem !important;
+  }
+  .lookbook-panel {
+    flex: none !important;
+    height: 360px !important;
+  }
+  .lookbook-panel p, .lookbook-panel span {
+    opacity: 1 !important;
+    max-height: 80px !important;
+    transform: none !important;
+    margin-top: 0.75rem !important;
+  }
+  .lookbook-panel div {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

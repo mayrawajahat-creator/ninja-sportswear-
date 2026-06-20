@@ -1,0 +1,23 @@
+# Tasks: Featured Products Section Redesign
+
+- [x] Redesign `FeaturedProducts.jsx` product cards
+  - [x] Remove MOQ (Minimum Order Quantity) and LEAD (Lead Time) details entirely
+  - [x] Make product images full color with no grayscale styling
+  - [x] Simplify card formatting to look aesthetic and minimalistic
+- [x] Redesign Main Products Catalog `src/app/(user)/products/page.js` cards
+  - [x] Define a clean `ProductCatalogCard` component matching homepage card layout
+  - [x] Remove MOQ and LEAD rows
+  - [x] Remove cluttered features tags lists
+  - [x] Ensure full color images without grayscale filters
+  - [x] Implement hover zoom effects and responsive aspect ratios (square)
+- [x] Analyze & Improve Homepage Aesthetics & Images
+  - [x] Create a new `PerformanceLookbook.jsx` component showcasing dynamic athletes
+  - [x] Implement horizontal-expand flex animations on lookbook panels
+  - [x] Integrate `PerformanceLookbook` in the homepage flow
+  - [x] Diversify `GallerySection` images by replacing repeated images with unique action photos (`stats-athlete.png`)
+- [x] Integrate Lucide React Icons
+  - [x] Replace inline SVGs in `WhyChooseUs.jsx` (ShieldCheck, Clock, Package, UserCheck, Percent, Globe)
+  - [x] Replace inline SVGs in `StatsSection.jsx` (TrendingUp, Handshake, Trophy, Globe)
+  - [x] Replace inline SVGs and emojis in `about/page.js` with styled Lucide icons (Target, Handshake, Zap, Globe, ArrowRight)
+  - [x] Replace inline SVGs in `contact/page.js` with clean Lucide icons (MapPin, Mail, Phone, Check, Send)
+- [x] Verify syntax and layout integrity
