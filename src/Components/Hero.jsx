@@ -280,6 +280,8 @@ export default function Hero() {
           object-fit: cover;
           object-position: center;
           opacity: 0.8;
+          filter: grayscale(100%);
+          mix-blend-mode: screen;
           transform: scale(1.06);
           transition: transform 8s cubic-bezier(0.16, 1, 0.3, 1) !important;
           will-change: transform;
