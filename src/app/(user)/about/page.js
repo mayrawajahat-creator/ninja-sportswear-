@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Target, Handshake, Zap, Globe, ArrowRight } from 'lucide-react';
+import PageHero, { HeroAccent } from '@/Components/PageHero';
 
 const values = [
   { icon: <Target size={24} strokeWidth={1.8} />, title: 'Precision', desc: 'Every stitch, seam, and cut is executed with meticulous attention to detail across all production runs.' },
@@ -15,66 +16,12 @@ const values = [
 export default function AboutPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section style={{
-        background: '#0A0A0A',
-        padding: 'clamp(7rem, 12vw, 10rem) 2rem clamp(6rem, 8vw, 8rem)',
-        position: 'relative',
-        overflow: 'hidden',
-        fontFamily: "'Inter', sans-serif",
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '700px',
-          height: '700px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <span style={{
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#FF6B00',
-            display: 'block',
-            marginBottom: '1rem',
-          }}>
-            About Us
-          </span>
-          <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-            fontWeight: 900,
-            letterSpacing: '-0.04em',
-            color: '#fff',
-            margin: '0 0 1.25rem',
-            lineHeight: 1.05,
-          }}>
-            Forged in Excellence,{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #FF6B00, #FF9500)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>
-              Built for Scale
-            </span>
-          </h1>
-          <p style={{
-            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-            color: 'rgba(255,255,255,0.5)',
-            lineHeight: 1.75,
-            maxWidth: '680px',
-            margin: '0 auto',
-          }}>
-            Since 2009, Ninja Sports Wear has been engineering premium athletic apparel for the world's fastest-growing sports brands. Our Sialkot-based facility combines traditional craftsmanship with modern production technology.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="About Us"
+        title={<>Forged in Excellence, <HeroAccent>Built for Scale</HeroAccent></>}
+        subtitle="Since 2009, Ninja Sports Wear has been engineering premium athletic apparel for the world's fastest-growing sports brands. Our Sialkot-based facility combines traditional craftsmanship with modern production technology."
+        align="center"
+      />
 
       {/* Widescreen Banner Overlap */}
       <div style={{ maxWidth: '1280px', margin: '-4rem auto 4rem', padding: '0 2rem', position: 'relative', zIndex: 2 }}>

@@ -23,6 +23,7 @@ const products = [
     moq: '50 pcs',
     lead: '2–3 wks',
     tag: 'Best Seller',
+    href: '/sports/soccer/jerseys/1',
   },
   {
     id: 2,
@@ -33,6 +34,7 @@ const products = [
     moq: '30 pcs',
     lead: '3–4 wks',
     tag: 'New',
+    href: '/sports/basketball/warmup-suits/1',
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const products = [
     moq: '50 pcs',
     lead: '2–3 wks',
     tag: 'Popular',
+    href: '/sports/soccer/shorts/1',
   },
   {
     id: 4,
@@ -53,6 +56,7 @@ const products = [
     moq: '40 pcs',
     lead: '3–4 wks',
     tag: 'New Design',
+    href: '/sports/baseball/jackets/1',
   },
   {
     id: 5,
@@ -63,6 +67,7 @@ const products = [
     moq: '50 pcs',
     lead: '2–3 wks',
     tag: 'Trending',
+    href: '/sports/football/compression/1',
   },
   {
     id: 6,
@@ -73,6 +78,7 @@ const products = [
     moq: '30 pcs',
     lead: '3–4 wks',
     tag: 'Hot Item',
+    href: '/sports/soccer/socks/1',
   },
 ];
 
@@ -213,7 +219,7 @@ function ProductCard({ p }) {
 
         {/* Request a Quote Button */}
         <div>
-          <Link href="/contact" className={`quote-btn-${p.id}`} style={{
+          <Link href={p.href || '/sports'} className={`quote-btn-${p.id}`} style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -233,7 +239,7 @@ function ProductCard({ p }) {
             transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
             width: '100%',
           }}>
-            <span>Request a Quote</span>
+            <span>View Product Details</span>
             <svg
               width="13"
               height="13"

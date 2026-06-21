@@ -111,7 +111,7 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Products Links */}
+        {/* Sports Links */}
         <div>
           <h4 style={{
             fontSize: '0.75rem',
@@ -121,10 +121,16 @@ const Footer = () => {
             color: 'rgba(255,255,255,0.35)',
             margin: '0 0 1.25rem',
           }}>
-            Products
+            Sports
           </h4>
-          {['Jerseys & Kits', 'Hoodies & Sweatshirts', 'Shorts & Bottoms', 'Compression Wear', 'Custom Branding'].map(item => (
-            <a key={item} href="/products" style={{
+          {[
+            { label: 'Lacrosse', href: '/sports/lacrosse' },
+            { label: 'Soccer', href: '/sports/soccer' },
+            { label: 'Basketball', href: '/sports/basketball' },
+            { label: 'Baseball', href: '/sports/baseball' },
+            { label: 'American Football', href: '/sports/football' },
+          ].map(item => (
+            <a key={item.label} href={item.href} style={{
               display: 'block',
               fontSize: '0.875rem',
               color: 'rgba(255,255,255,0.5)',
@@ -135,7 +141,7 @@ const Footer = () => {
               onMouseEnter={e => e.currentTarget.style.color = '#FF6B00'}
               onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.5)'}
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>

@@ -8,28 +8,28 @@ const items = [
   {
     id: 1,
     title: 'Elite Lacrosse Gear',
-    category: 'LACROSSE APPAREL / 01',
+    category: 'LACROSSE / 01',
     image: '/stats-athlete.png',
     gridArea: 'span 2 / span 1', // Tall vertical
   },
   {
     id: 2,
-    title: 'Custom Baseball Uniforms',
-    category: 'BASEBALL UNIFORMS / 02',
+    title: 'Custom Soccer Uniforms',
+    category: 'SOCCER / 02',
     image: '/about-hero.png',
     gridArea: 'span 1 / span 2', // Wide horizontal
   },
   {
     id: 3,
-    title: 'Basketball & Football Kits',
-    category: 'BASKETBALL & FOOTBALL / 03',
+    title: 'Championship Basketball Kits',
+    category: 'BASKETBALL / 03',
     image: '/blog-run.png',
     gridArea: 'span 1 / span 1', // Square
   },
   {
     id: 4,
-    title: 'Premium Sportswear',
-    category: 'PREMIUM SPORTSWEAR / 04',
+    title: 'Pro Football Gear',
+    category: 'AMERICAN FOOTBALL / 04',
     image: '/blog-action.png',
     gridArea: 'span 1 / span 1', // Square
   },

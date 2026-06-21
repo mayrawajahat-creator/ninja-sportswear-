@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
+import PageHero, { HeroAccent } from '@/Components/PageHero';
 
 const ARTICLES = [
   {
@@ -51,70 +52,12 @@ export default function BlogPage() {
 
   return (
     <main style={{ background: '#fafafa', minHeight: '100svh', paddingBottom: '6rem' }} className="blog-page">
-      {/* Page Hero */}
-      <section style={{
-        background: '#0A0A0A',
-        padding: 'clamp(7rem, 12vw, 10rem) 2rem clamp(4rem, 8vw, 6rem)',
-        position: 'relative',
-        overflow: 'hidden',
-        fontFamily: "'Inter', sans-serif",
-        marginBottom: '4rem',
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '700px',
-          height: '700px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <span style={{
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#FF6B00',
-            display: 'block',
-            marginBottom: '1rem',
-            fontFamily: "'Inter', sans-serif",
-          }}>
-            Ninja Insights
-          </span>
-          <h1 style={{
-            fontSize: 'clamp(2.3rem, 5vw, 3.5rem)',
-            fontWeight: 900,
-            letterSpacing: '-0.04em',
-            color: '#fff',
-            margin: '0 0 1.25rem',
-            lineHeight: 1.05,
-            fontFamily: "'Inter', sans-serif",
-          }}>
-            Manufacturing & Design{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #FF6B00, #FF9500)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>
-              Insights Studio
-            </span>
-          </h1>
-          <p style={{
-            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-            color: 'rgba(255,255,255,0.5)',
-            lineHeight: 1.75,
-            maxWidth: '680px',
-            margin: '0 auto',
-            fontFamily: "'Inter', sans-serif",
-          }}>
-            An in-depth guide to sportswear material science, B2B production tips, and global apparel logistics.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Ninja Insights"
+        title={<>Manufacturing & Design <HeroAccent>Insights Studio</HeroAccent></>}
+        subtitle="An in-depth guide to sportswear material science, B2B production tips, and global apparel logistics."
+        align="center"
+      />
 
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 2rem' }}>
         {/* Grid of Articles */}

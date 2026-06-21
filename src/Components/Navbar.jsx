@@ -9,46 +9,56 @@ import { motion, AnimatePresence } from 'framer-motion';
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Catalog', href: '/products', isCatalog: true },
+  { label: 'Sports', href: '/sports', isCatalog: true },
+  { label: 'Industries', href: '/industries' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 
 const catalogCategories = [
   {
-    title: 'Lacrosse Apparel',
+    title: 'Lacrosse',
     links: [
-      { label: 'Lacrosse Jerseys', href: '/products?category=lacrosse-jerseys' },
-      { label: 'Practice Pinnies', href: '/products?category=lacrosse-pinnies' },
-      { label: 'Lacrosse Shorts', href: '/products?category=lacrosse-shorts' },
-      { label: 'Custom Team Packs', href: '/products?category=lacrosse-packs' },
+      { label: 'Lacrosse Jerseys', href: '/sports/lacrosse' },
+      { label: 'Practice Pinnies', href: '/sports/lacrosse' },
+      { label: 'Lacrosse Shorts', href: '/sports/lacrosse' },
+      { label: 'View All Lacrosse', href: '/sports/lacrosse' },
     ],
   },
   {
-    title: 'Baseball Uniforms',
+    title: 'Soccer',
     links: [
-      { label: 'Baseball Jerseys', href: '/products?category=baseball-jerseys' },
-      { label: 'Baseball Pants', href: '/products?category=baseball-pants' },
-      { label: 'Training Jackets', href: '/products?category=baseball-jackets' },
-      { label: 'Custom Caps', href: '/products?category=baseball-caps' },
+      { label: 'Soccer Jerseys', href: '/sports/soccer' },
+      { label: 'Soccer Shorts', href: '/sports/soccer' },
+      { label: 'Training Kits', href: '/sports/soccer' },
+      { label: 'View All Soccer', href: '/sports/soccer' },
     ],
   },
   {
-    title: 'Basketball & Football',
+    title: 'Basketball',
     links: [
-      { label: 'Basketball Jerseys', href: '/products?category=basketball-jerseys' },
-      { label: 'Basketball Shorts', href: '/products?category=basketball-shorts' },
-      { label: 'Football Jerseys', href: '/products?category=football-jerseys' },
-      { label: 'Football Pants', href: '/products?category=football-pants' },
+      { label: 'Basketball Jerseys', href: '/sports/basketball' },
+      { label: 'Basketball Shorts', href: '/sports/basketball' },
+      { label: 'Warmup Suits', href: '/sports/basketball' },
+      { label: 'View All Basketball', href: '/sports/basketball' },
     ],
   },
   {
-    title: 'Premium Sportswear',
+    title: 'American Football',
     links: [
-      { label: 'Technical Hoodies', href: '/products?category=hoodies' },
-      { label: 'Compression Tights', href: '/products?category=tights' },
-      { label: 'Training Shorts', href: '/products?category=shorts' },
-      { label: 'Warmup Jackets', href: '/products?category=jackets' },
+      { label: 'Football Jerseys', href: '/sports/football' },
+      { label: 'Football Pants', href: '/sports/football' },
+      { label: 'Practice Jerseys', href: '/sports/football' },
+      { label: 'View All Football', href: '/sports/football' },
+    ],
+  },
+  {
+    title: 'Baseball',
+    links: [
+      { label: 'Baseball Jerseys', href: '/sports/baseball' },
+      { label: 'Baseball Pants', href: '/sports/baseball' },
+      { label: 'Training Jackets', href: '/sports/baseball' },
+      { label: 'View All Baseball', href: '/sports/baseball' },
     ],
   },
 ];
@@ -178,12 +188,11 @@ const Navbar = () => {
           </ul>
 
           {/* CTA Button */}
-          <Link href="/contact" className="navbar-cta" style={{
+          <Link href="/quote" className="navbar-cta" style={{
             fontFamily: "'Inter', sans-serif",
             fontWeight: 600,
             fontSize: '0.875rem',
             color: '#fff',
-            background: 'gradient-to-r from-[#FF6B00] to-[#FF8C00]',
             backgroundColor: '#FF6B00',
             padding: '0.6rem 1.5rem',
             borderRadius: '4px',
@@ -265,8 +274,8 @@ const Navbar = () => {
                 maxWidth: '1280px',
                 margin: '0 auto',
                 display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
-                gap: '2.5rem',
+                gridTemplateColumns: 'repeat(6, 1fr)',
+                gap: '2rem',
               }}>
                 {catalogCategories.map((cat, idx) => (
                   <div key={idx}>
@@ -482,7 +491,7 @@ const Navbar = () => {
                 </Link>
               );
             })}
-            <Link href="/contact" style={{
+            <Link href="/quote" style={{
               display: 'inline-block',
               marginTop: '1rem',
               fontFamily: "'Inter', sans-serif",

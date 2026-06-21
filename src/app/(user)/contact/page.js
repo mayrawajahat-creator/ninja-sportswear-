@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { MapPin, Mail, Phone, Check, Send } from 'lucide-react';
+import PageHero, { HeroAccent } from '@/Components/PageHero';
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -49,66 +50,12 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Page Hero */}
-      <section style={{
-        background: '#0A0A0A',
-        padding: 'clamp(7rem, 12vw, 10rem) 2rem clamp(4rem, 8vw, 6rem)',
-        position: 'relative',
-        overflow: 'hidden',
-        fontFamily: "'Inter', sans-serif",
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '700px',
-          height: '700px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <span style={{
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#FF6B00',
-            display: 'block',
-            marginBottom: '1rem',
-          }}>
-            Get In Touch
-          </span>
-          <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-            fontWeight: 900,
-            letterSpacing: '-0.04em',
-            color: '#fff',
-            margin: '0 0 1.25rem',
-            lineHeight: 1.05,
-          }}>
-            Request Your{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #FF6B00, #FF9500)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}>
-              Custom Quote
-            </span>
-          </h1>
-          <p style={{
-            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-            color: 'rgba(255,255,255,0.5)',
-            lineHeight: 1.75,
-            maxWidth: '520px',
-            margin: '0 auto',
-          }}>
-            Fill in your requirements below. Our team will respond with a detailed quote within 24 business hours.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Get In Touch"
+        title={<>Request Your <HeroAccent>Custom Quote</HeroAccent></>}
+        subtitle="Fill in your requirements below. Our team will respond with a detailed quote within 24 business hours."
+        align="center"
+      />
 
       {/* Contact Content */}
       <section style={{

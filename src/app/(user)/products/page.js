@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import PageHero, { HeroAccent } from '@/Components/PageHero';
 
 const products = [
   {
@@ -14,6 +15,7 @@ const products = [
     lead: '2–3 weeks',
     tag: 'Best Seller',
     features: ['Moisture-wicking', 'Anti-odor', 'Custom sublimation', '100% polyester'],
+    href: '/sports/soccer/jerseys/1',
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ const products = [
     lead: '3–4 weeks',
     tag: 'New',
     features: ['350gsm fleece', 'Custom embroidery', 'YKK zippers', 'Branded labels'],
+    href: '/sports/basketball/warmup-suits/1',
   },
   {
     id: 3,
@@ -36,6 +39,7 @@ const products = [
     lead: '2–3 weeks',
     tag: 'Popular',
     features: ['Stretch fabric', 'Deep pockets', 'Elastic waistband', 'Custom inseam'],
+    href: '/sports/soccer/shorts/1',
   },
   {
     id: 4,
@@ -47,6 +51,7 @@ const products = [
     lead: '3–4 weeks',
     tag: 'Premium',
     features: ['4-way stretch', 'UV protection', 'Flatlock seams', 'Muscle support'],
+    href: '/sports/football/compression/1',
   },
   {
     id: 5,
@@ -58,6 +63,7 @@ const products = [
     lead: '4–5 weeks',
     tag: 'New',
     features: ['Windproof shell', 'Water-resistant', 'Packable design', 'Custom lining'],
+    href: '/sports/baseball/jackets/1',
   },
   {
     id: 6,
@@ -69,6 +75,7 @@ const products = [
     lead: '4–6 weeks',
     tag: 'Bundle',
     features: ['Full kit package', 'Matching socks', 'Team bag', 'Bulk discount'],
+    href: '/sports/soccer/training-kits/1',
   },
 ];
 
@@ -210,7 +217,7 @@ function ProductCatalogCard({ product, tagColors }) {
 
         {/* Request a Quote Button */}
         <div>
-          <Link href="/contact" className={`quote-btn-${product.id}`} style={{
+          <Link href={product.href || '/sports'} className={`quote-btn-${product.id}`} style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -230,7 +237,7 @@ function ProductCatalogCard({ product, tagColors }) {
             transition: 'all 0.3s cubic-bezier(0.25, 1, 0.5, 1)',
             width: '100%',
           }}>
-            <span>Request a Quote</span>
+            <span>View Product Details</span>
             <svg
               width="13"
               height="13"
@@ -257,93 +264,39 @@ function ProductCatalogCard({ product, tagColors }) {
 export default function ProductsPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section style={{
-        background: '#0A0A0A',
-        padding: 'clamp(7rem, 12vw, 10rem) 2rem clamp(4rem, 8vw, 6rem)',
-        position: 'relative',
-        overflow: 'hidden',
-        fontFamily: "'Inter', sans-serif",
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '700px',
-          height: '700px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,107,0,0.07) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-        <div style={{ maxWidth: '1280px', margin: '0 auto', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-          <span style={{
-            fontSize: '0.75rem',
-            fontWeight: 600,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#FF6B00',
-            display: 'block',
-            marginBottom: '1rem',
-          }}>
-            Product Catalog
-          </span>
-          <h1 style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-            fontWeight: 900,
-            letterSpacing: '-0.04em',
-            color: '#fff',
-            margin: '0 0 1.25rem',
-            lineHeight: 1.05,
-          }}>
-            Premium Sportswear,{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #FF6B00, #FF9500)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+      <PageHero
+        eyebrow="Product Catalog"
+        title={<>Premium Sportswear, <HeroAccent>Bulk Ready</HeroAccent></>}
+        subtitle="Every product is available for full custom branding, custom cuts, and private label manufacturing. Minimum order quantities apply per category."
+        align="center"
+      >
+        {/* Info Pills */}
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginTop: '2rem' }}>
+          {['Custom Branding', 'OEM Available', 'Fast Sampling', 'Bulk Pricing'].map(pill => (
+            <div key={pill} style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              background: 'rgba(255,255,255,0.05)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '4px',
+              padding: '0.35rem 0.9rem',
             }}>
-              Bulk Ready
-            </span>
-          </h1>
-          <p style={{
-            fontSize: 'clamp(0.95rem, 2vw, 1.1rem)',
-            color: 'rgba(255,255,255,0.5)',
-            lineHeight: 1.75,
-            maxWidth: '680px',
-            margin: '0 auto 2rem',
-          }}>
-            Every product is available for full custom branding, custom cuts, and private label manufacturing. Minimum order quantities apply per category.
-          </p>
-
-          {/* Info Pills */}
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-            {['Custom Branding', 'OEM Available', 'Fast Sampling', 'Bulk Pricing'].map(pill => (
-              <div key={pill} style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: '4px',
-                padding: '0.35rem 0.9rem',
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" strokeWidth="2.5">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span style={{
+                fontSize: '0.75rem',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.6)',
+                letterSpacing: '0.02em',
               }}>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" strokeWidth="2.5">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: 500,
-                  color: 'rgba(255,255,255,0.6)',
-                  letterSpacing: '0.02em',
-                }}>
-                  {pill}
-                </span>
-              </div>
-            ))}
-          </div>
+                {pill}
+              </span>
+            </div>
+          ))}
         </div>
-      </section>
+      </PageHero>
 
       {/* Products Grid */}
       <section style={{
